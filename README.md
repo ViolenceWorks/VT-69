@@ -1,6 +1,6 @@
 # VT-69 Portable Terminal
 
-![Side View Image](https://github.com/ViolenceWorks/VT-69/blob/master/Web-Assets/SideViewRender.png)
+![Side View Image](https://github.com/ViolenceWorks/VT-69/blob/main/Web-Assets/SideViewRender.png)
 
 The VT-69 is a portable, battery-powered dumb terminal, along the lines of a VT-100, VT-220, Wyse WY-50, or other such microprocessor-controlled dumb terminals of the mid-80s to mid-90s.
 
@@ -22,4 +22,4 @@ Features include:
   * USB 2.0 over USB-C connector
   * Internal UART connectors allow for internal connection to Raspberry Pi Zero (a la VT-180) or any other development board with a 40-pin 'raspi' header.
   
-![Front View Image](https://github.com/ViolenceWorks/VT-69/blob/master/Web-Assets/FullFrontal.png)
+![Front View Image](https://github.com/ViolenceWorks/VT-69/blob/main/Web-Assets/FullFrontal.png)
