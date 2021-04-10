@@ -19,7 +19,8 @@ X3.64-1974, X3.64-1979 (ISO 2022 and 6429)), "A parser for DEC’s ANSI-
 compatible video terminals" by Paul Flow William (vt100.net/emu/dec_ansi_parser)
 and "Towards Standardized Video Terminals: ANSI X3.64 Device Control" Mark L.
 Siegel, BYTE Magazine April 1984, pp365-374., Article 4810 of alt.hackers from
-Dom@sound.demon.co.uk (The Dark Stranger), and the Linux man page for console_codes.
+Dom@sound.demon.co.uk (The Dark Stranger), and the Linux man page for 
+console_codes.
 
 Note VT-52 modes _are not supported_, as the VT-69 is an ANSI terminal.
 
