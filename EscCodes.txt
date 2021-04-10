@@ -16,7 +16,10 @@ The following is a list of Escape and Command codes supported by the VT-69. This
 list is taken (or influenced) by VT100 Series Video Terminal Technical Manual 
 (EK-VT100-TM-003) appendix A and D, ANSI Code Extension (ANSI Standard 
 X3.64-1974, X3.64-1979 (ISO 2022 and 6429)), "A parser for DEC’s ANSI-
-compatible video terminals" by Paul Flow William (vt100.net/emu/dec_ansi_parser) and "Towards Standardized Video Terminals: ANSI X3.64 Device Control" Mark L. Siegel, BYTE Magazine April 1984, pp365-374., Article 4810 of alt.hackers from Dom@sound.demon.co.uk (The Dark Stranger), and the Linux man page for console_codes.
+compatible video terminals" by Paul Flow William (vt100.net/emu/dec_ansi_parser)
+and "Towards Standardized Video Terminals: ANSI X3.64 Device Control" Mark L.
+Siegel, BYTE Magazine April 1984, pp365-374., Article 4810 of alt.hackers from
+Dom@sound.demon.co.uk (The Dark Stranger), and the Linux man page for console_codes.
 
 Note VT-52 modes _are not supported_, as the VT-69 is an ANSI terminal.
 
@@ -91,7 +94,11 @@ CBT - Cursor Backwards Tab
 	horizontal tabulation stop is desired.
 
 CHA - Cursor Horizontal Absolute
-	Moves the curor forward or backward along the active line tothe 				character position specified by the parameter. A parameter value of zero or one 		moves the character position to the first character position of the active line. 		A parameter value of N moves the active position to characterposition N 			of the active line.
+	Moves the curor forward or backward along the active line to the 
+	character position specified by the parameter. A parameter value of 
+	zero or one moves the character position to the first character position
+	of the active line. A parameter value of N moves the active position to
+	character position N of the active line.
 
 CHT - Cursor Horizontal Tab
 	Advance the active position horizontally to the next tabulation stop
@@ -124,7 +131,9 @@ CTC - Cursor Tabulation Control
 
 CUB - Cursor Backward
 	Moves the cursor in the backward direction. The distance moved is
-	determined by the parameter. If the parameter value is zero or one,the 	cursor is moved one position. If the parameter value is N, the cursor is 		moved N positions.
+	determined by the parameter. If the parameter value is zero or one,the
+	cursor is moved one position. If the parameter value is N, the cursor is 
+	moved N positions.
 
 CUD - Cursor Down
 	Moves the cursor in the down direction. The distance moved is determined by
@@ -133,11 +142,18 @@ CUD - Cursor Down
 
 CUF - Cursor Forward
 	Moves the cursor in the forward direction. The distance moved is determined
-	by the parameter. If the parameter value is zero or one, the cursor is 			moved one position. If the parameter value is N, the cursor is moved N 		positions.
+	by the parameter. If the parameter value is zero or one, the cursor is 
+	moved one position. If the parameter value is N, the cursor is moved N 	
+	positions.
 
 CUP - Cursor Postition
-	Moves the active position to the position specified by the parameters. This
-	sequence has two parameter values, the first specifing the vertical 			position and the second specifying the horizontal position. A parameter 		value of zero or one for the first or second parameter moves the active 		position of the first line or column in the display respectively. The 			default condition with no parameters present is equivalent to a Cursor to 		Home action.
+	Moves the active position to the position specified by the parameters. 
+	This sequence has two parameter values, the first specifing the vertical
+	position and the second specifying the horizontal position. A parameter 
+	value of zero or one for the first or second parameter moves the active 
+	position of the first line or column in the display respectively. The
+	default condition with no parameters present is equivalent to a Cursor to
+	Home action.
 
 CUU - Cursor Up
 	Moves the cursor in the up direction. The distance moved is determined by
@@ -236,7 +252,9 @@ NEL - Next Line
 	Causes the cursor to move to the first position on the next line downward.
 
 RC - Restore Cursor Position
-	Restores the cursor to the position saved with SC. If no cursor position 			has been saved, the default is the first character position of the first 			line.
+	Restores the cursor to the position saved with SC. If no cursor position 
+	has been saved, the default is the first character position of the first
+	line.
 
 RCP - Restore Cursor Position
 	Mirror of RC, included for ANSI.SYS compatability.
@@ -275,14 +293,50 @@ SEM - Select Edit Extent Mode
 
 SGR - Select Graphic Rendition
 	PS refers to a selective parameter. Multiple parameters may be seperated by
-	the semicolon character (Esc [ Ps;Ps;Ps m) The parameters are executed in
-	order and have the following meanings:
+	the semicolon character (Esc [ Ps;Ps;Ps m). An empty parameter (between
+	semicolons or string initiator or terminator) is interpreted as zero. The 
+	parameters are executed in order and have the following meanings:
 
 	0 or none		All attributes off
 	1			Bold on
-	4			Underscore on
-	5			Blink on
+	2			Set half-bright (simulated with color)
+	4			Set underline
 	7			Reverse video on
+	21			Set underline
+	22			Set normal intensity
+	24			Set underline off
+	27			Reverse video off
+	30			Set black foreground
+	31			Set red foreground
+	32			Set green foreground
+	33			Set brown foreground
+	34			Set blue foreground
+	35			Set magenta foreground
+	36			Set cyan foreground
+	37			Set white foreground
+	38			256/24-bit foreground color (see below)
+	39			Set default foregrougn color (white)
+	40			Set black background
+	41			Set red background
+	42			Set green background
+	43			Set brown background
+	44			Set blue background
+	45			Set magenta background
+	46			Set cyan background
+	47			Set white background
+	48			256/24-bit background color (see below)
+	49			Set default background color (black)
+	90..97			Set foreground to bright versions of 30..37
+	100..107		Set background, same as 40..47
+
+	Commands 38 and 48 require further arguments:
+	
+	;5;x	256 color: 	values 0..15 are IBGR (black, red, green...white),
+				values 16..231 are a 6x6x6 color cube,
+				values 232...255 a grayscale ramp.
+
+	;2;r;g;b 24-bit color:	r/g/b components are in the range 0..255.		
+				
 
 	Any other parameters are ignored.
 
