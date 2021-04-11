@@ -14,7 +14,7 @@ Pins 2 and 4 are the only power supplies for the header, providing 5V. Pin 1 is 
 
 ## Configuring a Linux-based Single Board Computer
 
-This guide assumes the SBC is a Raspberry Pi Zero running at leas Debian 'Buster', kernel version 5.10. This guide assumes `systemd`; earlier versions of Raspbian will not work with this guide. If you are running an older version of Raspbian, Google `/boot/cmdline.txt`.
+This guide assumes the SBC is a Raspberry Pi Zero running at leas Debian 'Jessie'  kernel version 4 or above. This guide assumes `systemd`; earlier versions of Raspbian (Wheezy) will not work with this guide. The non-systemd method was six years old when this document was created and will not be supported. If you are running an older version of Raspbian, Google `/boot/cmdline.txt` and fuck around with that. 
 
 1. Enable login shell over serial
 
