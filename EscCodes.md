@@ -6,11 +6,12 @@ sequences, as well as provide a listing of control characters, escape, and
 command codes supported by the VT-69.
 
 The VT-69 supports much of the ECMA-48/ISO6429/ANSI X3.64 terminal control 
-standards, as well as many private-mode sequences employed by the Linux console.
- It must be noted the VT-69 does not support _all_ terminal escape codes, as the
-philosophy of the ANSI X3.64 design committee was something like this:
+standards, as well as many private-mode sequences employed by the Linux console
+and DEC hardware. It must be noted the VT-69 does not support _all_ terminal
+escape codes, as the philosophy of the ANSI X3.64 design committee was something
+like this:
 
-> Here is a standard for escape codes.
+> We need a standard for terminal escape codes.
 > But all of these escape codes are optional.
 > And the implementation is left up to the manufacturer.
 > Also manufacturers can make their own private escape codes.
@@ -108,7 +109,7 @@ sequence is determined by its final character.
 
 A description of the sequences is listed below.
 
---
+---
 
 ## Escape and CSI Sequences and Mnemonics
 
