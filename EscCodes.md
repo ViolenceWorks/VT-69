@@ -1,20 +1,9 @@
-//////////////////////////////////////////////////////////////////////////////
-  ______                             _____          _           
- |  ____|                           / ____|        | |          
- | |__   ___  ___ __ _ _ __   ___  | |     ___   __| | ___  ___ 
- |  __| / __|/ __/ _` | '_ \ / _ \ | |    / _ \ / _` |/ _ \/ __|
- | |____\__ \ (_| (_| | |_) |  __/ | |___| (_) | (_| |  __/\__ \
- |______|___/\___\__,_| .__/ \___|  \_____\___/ \__,_|\___||___/
-                      | |                                       
-                      |_|		What Hath God Wrought?        
-
-///////////////////////////////////////////////////////////////////////////////
+# Escape and Control Codes
 
 The purpose of this document is to introduce the concepts of terminal control
 through in-band signalling via control characters, escape sequences, and CSI
 sequences, as well as provide a listing of control characters, escape, and 
 command codes supported by the VT-69.
-
 
 The VT-69 supports much of the ECMA-48/ISO6429/ANSI X3.64 terminal control 
 standards, as well as many private-mode sequences employed by the Linux console.
@@ -32,10 +21,9 @@ documents, I believe the rise of GUI-based interfaces in the late 1970s and
 early 1980s was an attempt to dig us all out of the immense technological debt
 incurred during the development of terminals and Text-based User Interfaces.
 
-
 ---
 
-##Definitions
+## Definitions
 The following listing defines the basic elements of the ANSI 
 escape sequences.
 
@@ -57,7 +45,7 @@ functions for the VT-69 where applicable.
 
 ---
 
-##Control characters
+## Control characters
 A control character is in the range 0x00-0x1F and with 8-bit support, 0x80-0x9F.
 These characters are acted upon immediately, even in the middle of an escape 
 sequence, and the escape sequence continues with the next character.
@@ -82,7 +70,7 @@ CSI | 0x9B | Null | Equivalent to Esc [ in 8-bit mode
 
 ---
 
-##ESC Sequences
+## ESC Sequences
 Escape sequences that are not CSI sequences usually take the form of ESC c,
 where c is a character. The most common Escape sequences are listed in the
 table below.
@@ -112,7 +100,7 @@ Esc = | DECPAM | Set application keypad mode
 
 ---
 
-##CSI Sequences
+## CSI Sequences
 CSI (or ESC [ ) is followed by a sequence of paramaters, at most 20, that
 are seperated by semicolons ( ; ). Empty or absent parameters are usually
 taken to be 1, however there are exceptions to this. The action of the CSI
@@ -122,85 +110,85 @@ A description of the sequences is listed below.
 
 --
 
-##Escape and CSI Sequences and Mnemonics
+## Escape and CSI Sequences and Mnemonics
 
-Mnemonic	Name				Sequence		
+Mnemonic	| Name				| Sequence		
 -------------------------------------------------------------------------
-SC		Save Cursor Position		Esc 7
-RC		Recall Cursor Position		Esc 8
-ICH		Insert Character 		Esc [ Pn @		1
-CUU		Cursor up			Esc [ Pn A		1
-HPR		Horizontal Position Relative	Esc [ pn a		1
-CUD		Cursor down			Esc [ Pn B		1
-CUF		Cursor forward (right)		Esc [ Pn C		1
-DA		Device Attribute		Esc [ c		
-RIS		Reset to Initial State		Esc c
-IND		Index				Esc D
-CUB		Cursor backward (left)		Esc [ Pn D		1
-VPA		Vertical Position Absolute	Esc [ Pn d		
-NEL		Next Line			Esc E
-CNL		Cursor Next Line		Esc [ Pn E		1
-VPR		Vertical Position Relative	Esc [ Pn e		1
-CPL		Cursor Preceding Line		Esc [ Pn F		1
-HVP		Horizontal Vertical Position	Esc [ Pn f		1, 1
-CHA		Cursor Horizontal Absolute	Esc [ Pn G		1
-TBC		Tabulation Clear		Esc [ pn g		0
-CUP		Cursor Position			Esc [ Pn ; Pn H		1, 1
-SM		Set Mode			Esc [ pn h		
-HTS		Horizontal Tab Set		Esc H
-CHT		Cursor Horizontal Tab		Esc [ Pn I		1
-ED		Erase In Display		Esc [ Ps J		0
-EL		Erase In Line			Esc [ Ps K		0
-IL		Insert Lines			Esc [ Ps L		1
-RM		Reset Mode			Esc [ ps l		
-RI		Reverse Index			Esc M
-DL		Delete Lines			Etc [ Ps M		1
-SGR		Select Grapic Rendition		Esc [ Ps m
-DSR		Device Status Report		Esc [ ps n
-DCH		Delete Character		Esc [ Pn P		1
-SEM		Select Edit Extent Mode		Esc [ Pn Q		0
-DECSTBM		Set scrolling region		Esc [ Pn ; Pn r		0, 24	
-SCP		Save Cursor Position		Esc [ s
-RCP		Restore Cursor Position		Esc [ u	
-CTC		Cursor Tabulation Control	Esc [ Ps W		0
-ECH		Erase Character			Esc [ Pn X		1
-CBT		Cursor Backwards Tab		Esc [ Ps Z		1
-HPA		Horizontal Position Absolute	Esc [ Ps '		1
+SC		| Save Cursor Position		| Esc 7
+RC		| Recall Cursor Position	| Esc 8
+ICH		| Insert Character 		| Esc [ Pn @		
+CUU		| Cursor up			| Esc [ Pn A		
+HPR		| Horizontal Position Relative	| Esc [ pn a		
+CUD		| Cursor down			| Esc [ Pn B		
+CUF		| Cursor forward (right)	| Esc [ Pn C		
+DA		| Device Attribute		| Esc [ c		
+RIS		| Reset to Initial State	| Esc c
+IND		| Index				| Esc D
+CUB		| Cursor backward (left)	| Esc [ Pn D		
+VPA		| Vertical Position Absolute	| Esc [ Pn d		
+NEL		| Next Line			| Esc E
+CNL		| Cursor Next Line		| Esc [ Pn E		
+VPR		| Vertical Position Relative	| Esc [ Pn e		
+CPL		| Cursor Preceding Line		| Esc [ Pn F		
+HVP		| Horizontal Vertical Position	| Esc [ Pn f	
+CHA		| Cursor Horizontal Absolute	| Esc [ Pn G		
+TBC		| Tabulation Clear		| Esc [ pn g		
+CUP		| Cursor Position		| Esc [ Pn ; Pn H		
+SM		| Set Mode			| Esc [ pn h		
+HTS		| Horizontal Tab Set		| Esc H
+CHT		| Cursor Horizontal Tab		| Esc [ Pn I		
+ED		| Erase In Display		| Esc [ Ps J		
+EL		| Erase In Line			| Esc [ Ps K		
+IL		| Insert Lines			| Esc [ Ps L		
+RM		| Reset Mode			| Esc [ ps l		
+RI		| Reverse Index			| Esc M
+DL		| Delete Lines			| Etc [ Ps M		
+SGR		| Select Grapic Rendition	| Esc [ Ps m
+DSR		| Device Status Report		| Esc [ ps n
+DCH		| Delete Character		| Esc [ Pn P		
+SEM		| Select Edit Extent Mode	| Esc [ Pn Q		
+DECSTBM		| Set scrolling region		| Esc [ Pn ; Pn r			
+SCP		| Save Cursor Position		| Esc [ s
+RCP		| Restore Cursor Position	| Esc [ u	
+CTC		| Cursor Tabulation Control	| Esc [ Ps W		
+ECH		| Erase Character		| Esc [ Pn X		
+CBT		| Cursor Backwards Tab		| Esc [ Ps Z	
+HPA		| Horizontal Position Absolute	| Esc [ Ps '		
 
 ---
 
-##CBT - Cursor Backwards Tab
+## CBT - Cursor Backwards Tab
 	Moves the cursor horizontally and backwards to the preceding tabulation
 	stop. A parameter of zero or one will indicate the preceding horizontal
 	tabulation stop. A larger value (N) will indicate the Nth preceding
 	horizontal tabulation stop is desired.
 
-##CHA - Cursor Horizontal Absolute
+## CHA - Cursor Horizontal Absolute
 	Moves the curor forward or backward along the active line to the 
 	character position specified by the parameter. A parameter value of 
 	zero or one moves the character position to the first character position
 	of the active line. A parameter value of N moves the active position to
 	character position N of the active line.
 
-##CHT - Cursor Horizontal Tab
+## CHT - Cursor Horizontal Tab
 	Advance the active position horizontally to the next tabulation stop
 	according to the parameter value. A parameter value of zero or one will
 	indicate the next horizontal tabulation stope, and a larger value (N) will
 	indicate the Nth following horizontal tabulation stop is desired.
 
-##CNL - Cursor New Line
+## CNL - Cursor New Line
 	Moves the cursor to the first position of the next display line or Nth
 	following display line depending on the parameter. A parameter value of
 	zero or one indicates the next line. A parameter value of N indicates the
 	Nth following line.
 
-##CPL - Cursor Preceding Line
+## CPL - Cursor Preceding Line
 	Moves the active position to the first position of the preceding display
 	line or Nth preceding display line, depending on the parameter. A parameter
 	value of zero or one indicates the preceding line. A parameter value of N
 	indicates the Nth preceding line.
 
-##CTC - Cursor Tabulation Control
+## CTC - Cursor Tabulation Control
 	Causes one or more tabulation stops to be set or cleared according to the
 	parameters. All lines are effected (as we are not dealing with Tabulation
 	Stop Mode):
@@ -211,24 +199,24 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 
 	All other parameters are ignored.
 
-##CUB - Cursor Backward
+## CUB - Cursor Backward
 	Moves the cursor in the backward direction. The distance moved is
 	determined by the parameter. If the parameter value is zero or one,the
 	cursor is moved one position. If the parameter value is N, the cursor is 
 	moved N positions.
 
-##CUD - Cursor Down
+## CUD - Cursor Down
 	Moves the cursor in the down direction. The distance moved is determined by
 	the parameter. If the parameter value is zero or one, the cursor is moved
 	one position. If the parameter value is N, the cursor is moved N positions.
 
-##CUF - Cursor Forward
+## CUF - Cursor Forward
 	Moves the cursor in the forward direction. The distance moved is determined
 	by the parameter. If the parameter value is zero or one, the cursor is 
 	moved one position. If the parameter value is N, the cursor is moved N 	
 	positions.
 
-##CUP - Cursor Postition
+## CUP - Cursor Postition
 	Moves the active position to the position specified by the parameters. 
 	This sequence has two parameter values, the first specifing the vertical
 	position and the second specifying the horizontal position. A parameter 
@@ -237,12 +225,12 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 	default condition with no parameters present is equivalent to a Cursor to
 	Home action.
 
-##CUU - Cursor Up
+## CUU - Cursor Up
 	Moves the cursor in the up direction. The distance moved is determined by
 	the parameter. If the parameter value is zero or one, the cursor is moved
 	one position. If the parameter value is N, the cursor is moved N positions.
 
-##DA - Device Attribute
+## DA - Device Attribute
 	Terminal answers ESC [ ? 6 c -- "I am a VT102"
 
 	This may be changed in regards to the options present on the emulated VT100:
@@ -260,7 +248,7 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 	It appears that the first parameter is not necessary, therefore all paramaters
 	may take the form ESC [ ? (0..7) c.
 
-##DCH - Delete Character
+## DCH - Delete Character
 	Deletes the character at the cursor and possibly other adjacent characters
 	according to the parameter. The adjacent string of characters, if any, is
 	shifted towards the active position. The vacated character positions at the
@@ -271,14 +259,14 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 	The extent (display, line) of the string affected is determined by the
 	setting of the Editing Extent Mode (see SEM).
 
-##DECSTBM - Set Scrolling Region
+## DECSTBM - Set Scrolling Region
 	Defines the scrolling region of the display. Default parameters are 0, 24.
 
-##DL - Delete Lines
+## DL - Delete Lines
 	Deletes the indicated number of lines, inclusive of current line. Default
 	numberof lines is 1.
 
-##DSR - Device Status Report
+## DSR - Device Status Report
 	
 	Esc [ 5 n
 		Device Status Report (DSR): Answer is ESC [ 0 n (Terminal OK)
@@ -287,13 +275,13 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 		Cursor Position Report (CPR): Answer is Esc [ y ; x R, where
 		x,y is the cursor location.
 
-##ECH - Erase Character
+## ECH - Erase Character
 	Erases the character at the cursor and possibly other following characters,
 	according to the parameter. The position of the cursor is unchanged. A
 	numeric parameter of zero or one indicates that one character is erased. A
 	numeric parameter of N indicates that N characters are erased.
 
-##EL - Erase In Line
+## EL - Erase In Line
 	Erases line, depending on parameter:
 
 	0 			Erase from cursor to end of line
@@ -302,7 +290,7 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 
 	Any other parameters are ignored.
 
-##ED - Erase In Display
+## ED - Erase In Display
 	Erases display, depending on parameter:
 
 	0 			Erase from cursor to end of screen
@@ -311,63 +299,63 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 
 	Any other parameters are ignored.
 
-##HPA - Horizontal Position Absolute
+## HPA - Horizontal Position Absolute
 	Moves the cursor to the indicated column on the current row, default 1.
 
-##HPR -  Horizontal Position Relative
+## HPR -  Horizontal Position Relative
 	Moves the cursor right the indicated # of columns, default 1.
 
-##HTS - Horizontal Tab Set
+## HTS - Horizontal Tab Set
 	Sets one horizontal tabulation stop at the cursor.
 
-##HVP - Horizontal Vertical Position
+## HVP - Horizontal Vertical Position
 	Move cursor to the indicated row, column
 
-##ICH - Insert Character
+## ICH - Insert Character
 	Inserts the indicated number of blank characters.
 
-##IL - Insert indicated number of lines
+## IL - Insert indicated number of lines
 	Inserts the indicated number of blank lines, defualt number of 1.
 
-##IND - Index
+## IND - Index
 	Causes the cursor to move downward one line without changing the horizontal
 	position.
 
-##NEL - Next Line
+## NEL - Next Line
 	Causes the cursor to move to the first position on the next line downward.
 
-##RC - Restore Cursor Position
+## RC - Restore Cursor Position
 	Restores the cursor to the position saved with SC. If no cursor position 
 	has been saved, the default is the first character position of the first
 	line.
 
-##RCP - Restore Cursor Position
+## RCP - Restore Cursor Position
 	Mirror of RC, included for ANSI.SYS compatability.
 
 	All parameters are ignored.
 
-##RI - Reverse Index
+## RI - Reverse Index
 	Moves the cursor to the same horizontal position on the preceding line.
 
-##RIS - Reset to Initial State
+## RIS - Reset to Initial State
 	Resets a device to its initial state, that is, the state it has after it is
 	switched on. This affects resetting of all tabulation, reset graphic
 	rendition, erasure of all positions, and moving the cursor to the first
 	character position of the first line.
 
-##RM - Reset Mode
+## RM - Reset Mode
 	Performs the inverse of Set Mode (see below).
 
-##SC - Save Cursor Position
+## SC - Save Cursor Position
 	Saves cursor position.
 
-##SCP - Save Cursor Position
+## SCP - Save Cursor Position
 	Mirror of SC, included for ANSI.SYS compatability.
 
 	All parameters are ignored.
 
 
-##SEM - Select Edit Extent Mode
+## SEM - Select Edit Extent Mode
 	Selects the extent of the display to be affected by the Insert Character 
 	(ICH) and Delete Character (DCH) actions according to the parameter:
 
@@ -376,7 +364,7 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 
 	Any other parameters are ignored.
 
-##SGR - Select Graphic Rendition
+## SGR - Select Graphic Rendition
 	PS refers to a selective parameter. Multiple parameters may be seperated by
 	the semicolon character (Esc [ Ps;Ps;Ps m). An empty parameter (between
 	semicolons or string initiator or terminator) is interpreted as zero. The 
@@ -424,9 +412,9 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 				
 	Any other parameters are ignored.
 
-##SM - Set Mode
+## SM - Set Mode
 
-	###ECMA-48 Mode Switches
+	### ECMA-48 Mode Switches
 	
 	Esc [ 4 h
 		DECIM (default off): Set Insert Mode.
@@ -435,7 +423,7 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 		LF/NL (default off): Automatically follow echo of LF, VT, or FF
 		with CR.
 
-	###DEC Private Mode (DECSET/DECRST) Mode Switches
+	### DEC Private Mode (DECSET/DECRST) Mode Switches
 
 	ESC [ ? 1 h
 		DECCKM (default off): When set, the cursor keys send an ESC 0 prefix,
@@ -459,7 +447,7 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 	ESC [ ? 25 h
 		DECTECM (default on): Make cursor visible.
 
-##TBC - Tabulation Clear
+##T BC - Tabulation Clear
 	Clears tab stop according to the following parameters:
 
 	0 or none	Tabulation clear at current column
@@ -467,10 +455,10 @@ HPA		Horizontal Position Absolute	Esc [ Ps '		1
 
 	Any other parameters are ignored.
 
-##VPA - Vertical Position Absolute
+## VPA - Vertical Position Absolute
 	Move fursor down to the indicated row, current column.
 
-##VPR - Vertical Position Relative
+## VPR - Vertical Position Relative
 	Move the cursor down the indicated number of rows.
 
 ---
