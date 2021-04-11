@@ -14,4 +14,20 @@ Pins 2 and 4 are the only power supplies for the header, providing 5V. Pin 1 is 
 
 ## Configuring a Linux-based Single Board Computer
 
-This guide assumes the SBC is a Raspberry Pi Zero running at leas Debian 'Buster', kernel version 5.10. Earlier versions of Raspbian will not work with this guide; 
+This guide assumes the SBC is a Raspberry Pi Zero running at leas Debian 'Buster', kernel version 5.10. This guide assumes `systemd`; earlier versions of Raspbian will not work with this guide. If you are running an older version of Raspbian, Google `/boot/cmdline.txt`.
+
+1. Enable login shell over serial
+
+	From the console, type `sudo raspi-config`. Enable login shell over serial.
+
+2. Edit the serial-getty service
+
+	change the line `ExecStart=-/sbin/agetty -o '-p -- \\u' --keep-baud 115200,38400,9600 %I $TERM` to the following: `ExecStart=-/sbin/agetty 9600 %I vt100`.
+
+3. Restart systemctl
+
+	`systemctr daemon-reload`
+
+4. Reboot the system.
+
+	On reboot, you should see a stream coming from the VT-69's internal header. After the Pi boots, you will be able to login. If you do not see a login propmpt, change the terminal settings to 9600 baud.
