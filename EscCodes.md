@@ -448,7 +448,7 @@ HPA | Horizontal Position Absolute | Esc [ Ps '
 	ESC [ ? 25 h
 		DECTECM (default on): Make cursor visible.
 
-##T BC - Tabulation Clear
+## TBC - Tabulation Clear
 	Clears tab stop according to the following parameters:
 
 	0 or none	Tabulation clear at current column
