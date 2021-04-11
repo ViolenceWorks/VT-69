@@ -4,14 +4,14 @@ The VT-69 includes an internal 40-pin header for attaching a single board comput
 
 ## The Internal Header
 
-The internal 40-pin header follows the 'Raspberry Pi' format, with 3.3V on pin one, 5V power input on pins 2 and 4, etc... The Rx and Tx pins (from microcontroller to header) are pins 8 and 10, respectively, and there are provisions for an optional RTS and CTS connections through pins 3 and 5, resepectively.
+The internal 40-pin header follows the 'Raspberry Pi' format, with 3.3V on pin one, 5V power input on pins 2 and 4, etc... The Rx and Tx pins (from microcontroller to header) are pins 8 and 10, respectively, and there are provisions for an optional RTS and CTS connections through pins 31 and 17, resepectively.
 
 ![Diagram of pin header](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/40PinHeader.png)
 
 Pins 2 and 4 are the only power supplies for the header, providing 5V. Pin 1 is treated as an output on the header; The VT-69 may be configured to default to the internal header if the microcontroller detects a 3.3 logic level high on this pin during reset.
 
-**Important** If you develop your own extention to the 
+**Important** If you develop your own extention to the VT-69, your board must _supply_ 3.3V to the VT-69 over pin 1 for automatic detection of the board to occur during boot. 
 
 ## Configuring a Linux-based Single Board Computer
 
-This guide assumes the SBC is a Raspberry Pi zero. 
+This guide assumes the SBC is a Raspberry Pi Zero running at leas Debian 'Buster', kernel version 5.10. Earlier versions of Raspbian will not work with this guide; 
