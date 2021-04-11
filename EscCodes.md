@@ -112,48 +112,48 @@ A description of the sequences is listed below.
 
 ## Escape and CSI Sequences and Mnemonics
 
-Mnemonic	| Name				| Sequence		
--------------------------------------------------------------------------
-SC		| Save Cursor Position		| Esc 7
-RC		| Recall Cursor Position	| Esc 8
-ICH		| Insert Character 		| Esc [ Pn @		
-CUU		| Cursor up			| Esc [ Pn A		
-HPR		| Horizontal Position Relative	| Esc [ pn a		
-CUD		| Cursor down			| Esc [ Pn B		
-CUF		| Cursor forward (right)	| Esc [ Pn C		
-DA		| Device Attribute		| Esc [ c		
-RIS		| Reset to Initial State	| Esc c
-IND		| Index				| Esc D
-CUB		| Cursor backward (left)	| Esc [ Pn D		
-VPA		| Vertical Position Absolute	| Esc [ Pn d		
-NEL		| Next Line			| Esc E
-CNL		| Cursor Next Line		| Esc [ Pn E		
-VPR		| Vertical Position Relative	| Esc [ Pn e		
-CPL		| Cursor Preceding Line		| Esc [ Pn F		
-HVP		| Horizontal Vertical Position	| Esc [ Pn f	
-CHA		| Cursor Horizontal Absolute	| Esc [ Pn G		
-TBC		| Tabulation Clear		| Esc [ pn g		
-CUP		| Cursor Position		| Esc [ Pn ; Pn H		
-SM		| Set Mode			| Esc [ pn h		
-HTS		| Horizontal Tab Set		| Esc H
-CHT		| Cursor Horizontal Tab		| Esc [ Pn I		
-ED		| Erase In Display		| Esc [ Ps J		
-EL		| Erase In Line			| Esc [ Ps K		
-IL		| Insert Lines			| Esc [ Ps L		
-RM		| Reset Mode			| Esc [ ps l		
-RI		| Reverse Index			| Esc M
-DL		| Delete Lines			| Etc [ Ps M		
-SGR		| Select Grapic Rendition	| Esc [ Ps m
-DSR		| Device Status Report		| Esc [ ps n
-DCH		| Delete Character		| Esc [ Pn P		
-SEM		| Select Edit Extent Mode	| Esc [ Pn Q		
-DECSTBM		| Set scrolling region		| Esc [ Pn ; Pn r			
-SCP		| Save Cursor Position		| Esc [ s
-RCP		| Restore Cursor Position	| Esc [ u	
-CTC		| Cursor Tabulation Control	| Esc [ Ps W		
-ECH		| Erase Character		| Esc [ Pn X		
-CBT		| Cursor Backwards Tab		| Esc [ Ps Z	
-HPA		| Horizontal Position Absolute	| Esc [ Ps '		
+Mnemonic | Name	| Sequence		
+---------|------|----------
+SC | Save Cursor Position | Esc 7
+RC | Recall Cursor Position | Esc 8
+ICH | Insert Character | Esc [ Pn @		
+CUU | Cursor up | Esc [ Pn A		
+HPR | Horizontal Position Relative | Esc [ pn a		
+CUD | Cursor down | Esc [ Pn B		
+CUF | Cursor forward (right) | Esc [ Pn C		
+DA | Device Attribute | Esc [ c		
+RIS | Reset to Initial State | Esc c
+IND | Index | Esc D
+CUB | Cursor backward (left) | Esc [ Pn D		
+VPA | Vertical Position Absolute | Esc [ Pn d		
+NEL | Next Line	 | Esc E
+CNL | Cursor Next Line | Esc [ Pn E		
+VPR | Vertical Position Relative | Esc [ Pn e		
+CPL | Cursor Preceding Line | Esc [ Pn F		
+HVP | Horizontal Vertical Position | Esc [ Pn f	
+CHA | Cursor Horizontal Absolute | Esc [ Pn G		
+TBC | Tabulation Clear | Esc [ pn g		
+CUP | Cursor Position | Esc [ Pn ; Pn H		
+SM | Set Mode | Esc [ pn h		
+HTS | Horizontal Tab Set | Esc H
+CHT | Cursor Horizontal Tab | Esc [ Pn I		
+ED | Erase In Display | Esc [ Ps J		
+EL | Erase In Line | Esc [ Ps K		
+IL | Insert Lines | Esc [ Ps L		
+RM | Reset Mode | Esc [ ps l		
+RI | Reverse Index | Esc M
+DL | Delete Lines | Etc [ Ps M		
+SGR | Select Grapic Rendition | Esc [ Ps m
+DSR | Device Status Report | Esc [ ps n
+DCH | Delete Character | Esc [ Pn P		
+SEM | Select Edit Extent Mode | Esc [ Pn Q		
+DECSTBM | Set scrolling region | Esc [ Pn ; Pn r			
+SCP | Save Cursor Position | Esc [ s
+RCP | Restore Cursor Position | Esc [ u	
+CTC | Cursor Tabulation Control | Esc [ Ps W		
+ECH | Erase Character | Esc [ Pn X		
+CBT | Cursor Backwards Tab | Esc [ Ps Z	
+HPA | Horizontal Position Absolute | Esc [ Ps '		
 
 ---
 
