@@ -1,6 +1,7 @@
 # Table of Contents
 
-## Terminal Parser
+## User's Guide
+
 
 ## Using The VT-69
 
