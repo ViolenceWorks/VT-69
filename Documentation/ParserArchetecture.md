@@ -32,5 +32,7 @@ Magenta | 1 | 0 | 1
 Cyan | 0 | 1 | 1
 White | 1 | 1 | 1
 
+While this imlementation is limited in that it does not offer complete compatability with Linux console escape codes, it is far more capable than a hardware VT-100. The 'blink' attribute is not implemented, because web browsers got rid of that tag and I'm still salty about it, and the marquee tag is too hard to build. 
+
 
 
