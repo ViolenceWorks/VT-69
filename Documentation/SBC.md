@@ -4,7 +4,7 @@ The VT-69 includes an internal 40-pin header for attaching a single board comput
 
 ## The Internal Header
 
-The internal 40-pin header follows the 'Raspberry Pi' format, with 3.3V on pin one, 5V power input on pins 2 and 4, etc... The Rx and Tx pins (from microcontroller to header) are pins 8 and 10, respectively, and there are provisions for an optional RTS and CTS connections through pins 31 and 17, resepectively.
+The internal 40-pin header follows a very common layout, with 3.3V on pin one, 5V power input on pins 2 and 4, etc... The Rx and Tx pins (from microcontroller to header) are pins 8 and 10, respectively, and there are provisions for an optional RTS and CTS connections through pins 31 and 17, resepectively.
 
 ![Diagram of pin header](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/40PinHeader.png)
 
@@ -14,7 +14,7 @@ Pins 2 and 4 are the only power supplies for the header, providing 5V. Pin 1 is 
 
 ## Configuring a Linux-based Single Board Computer
 
-This guide assumes the SBC is a Raspberry Pi Zero running at leas Debian 'Jessie'  kernel version 4 or above. This guide assumes `systemd`; earlier versions of Raspbian (Wheezy) will not work with this guide. The non-systemd method was six years old when this document was created and will not be supported. If you are running an older version of Raspbian, Google `/boot/cmdline.txt` and fuck around with that. 
+This guide assumes the SBC is running at least Debian 'Jessie', kernel version 4 or above. This guide assumes `systemd`; Earlier versions (Wheezy) will not work with this guide. The non-systemd method was six years old when this document was created and will not be supported. If you are running an older version Debian, Google `/boot/cmdline.txt` and fuck around with that. 
 
 1. Enable login shell over serial
 
