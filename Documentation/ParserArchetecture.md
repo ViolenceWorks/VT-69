@@ -7,6 +7,8 @@ blah blah blah blah
 
 The parser blah blah blah
 
+![Image of parser state machine](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/StateMachine.png)
+
 ## Implementation of the state machine
 
 Blah blah blah
