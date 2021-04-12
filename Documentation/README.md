@@ -11,5 +11,5 @@
 
 ## Terminal Parser
 * [Escape codes](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/EscCodes.md)
-* Archetecture of Parser
+* [Archetecture of Parser](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ParserArchetecture.md)
 * Thing 3
