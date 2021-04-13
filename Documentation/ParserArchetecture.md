@@ -67,6 +67,19 @@ void parseChar(uint8_t character)
 	}
 }
 ```
+From there, each state acts upon an incoming character according to the state machine. An exception to this rule is the Ground state. This handles all characters, including control characters in the range 0x00-0x1F. Many of these characters do nothing (0x07, BEL, is nonfunctional, because there is no speaker), although some are important. Implemented control characters are as follows:
+
+ASCII Code | Mnemonic | Function
+-----------|----------|-----------
+0x00 | NUL | Always ignore
+0x08 | BS | Backspace
+0x09 | TAB | Horizontal Tab
+0x0A | LF | Line Feed
+0x0B | VT | Vertical Tab
+0x0C | FF | Form Feed
+0x0D | CR | Carriage Return
+0x1B | ESC | Transition to Escape state
+0x7F | DEL | Ignored by terminal
 
 ### SGR - Select Graphic Rendition
 
@@ -89,7 +102,7 @@ Magenta | 1 | 0 | 1
 Cyan | 0 | 1 | 1
 White | 1 | 1 | 1
 
-While this imlementation is limited in that it does not offer complete compatability with Linux console escape codes, it is far more capable than a hardware VT-100. The 'blink' attribute is not implemented, because web browsers got rid of that tag and I'm still salty about it, and the marquee tag is too hard to build. 
+While this imlementation is limited in that it does not offer complete compatability with Linux console escape codes, it is far more capable than a hardware VT-100. The 'blink' attribute is not implemented, because web browsers got rid of that tag and I'm still salty about it, and the marquee tag is too hard to build, or I don't care enough to do it.
 
 
 
