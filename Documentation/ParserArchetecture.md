@@ -40,7 +40,7 @@ The parser is effectively a state machine with six states:
 ## Implementation of the state machine
 
 The core of the parser is a state machine. Each incoming character is sent to a function representing the current state:
-
+```C
 	void parseChar(uint8_t character)
 	{	
 		parserState state = currentState;
@@ -49,29 +49,24 @@ The core of the parser is a state machine. Each incoming character is sent to a 
 			case stateGround:
 				groundState(character);
 				break;
-			
 			case stateESC:
 				escState(character);
 				break;
-			
 			case stateESCinter:
 				escIntState(character);
 				break;
-			
 			case stateCSIentry:
 				CSIentryState(character);
 				break;
-			
 			case stateCSIparam:
 				CSIparamState(character);
 				break;
-			
 			case stateCSIignore:
 				CSIignoreState(character);
 				break;
 		}
-	
 	}
+```
 
 ### SGR - Select Graphic Rendition
 
