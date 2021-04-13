@@ -1,6 +1,6 @@
 # Setting Up a Single Board Computer
 
-The VT-69 includes an internal 40-pin header for attaching a single board computer (SBC), expansion board, or other electronics to expand the functionality of the VT-69. The inspiration for this internal header comes from the Digital VT-180 terminal, basically a VT-100 terminal with an extra board installed which included a Z80 processor, 64k of RAM, a floppy disk controller and an extra serial port controller. This addition made the VT-180 a dedicated personal computer using the CP/M operating system.
+The VT-69 includes an internal 40-pin header for attaching a single board computer (SBC), expansion board, or other electronics to expand the functionality of the VT-69. The inspiration for this internal header comes from the DEC VT-180 terminal, basically a VT-100 terminal with an extra board installed which included a Z80 processor, 64k of RAM, a floppy disk controller and an extra serial port controller. This addition made the VT-180 a dedicated personal computer using the CP/M operating system.
 
 ## The Internal Header
 
