@@ -6,13 +6,14 @@
 The VT-69 is a portable, battery-powered dumb terminal, along the lines of a VT-100, VT-220, Wyse WY-50, or other such microprocessor-controlled dumb terminals of the mid-80s to mid-90s. It's a portable shell, or a game console that only plays text-based adventures.
 
 Features include:
+* Written in Rust 
 * 4" LCD with 800x480 resolution
   * Display allows for a full 80x24 character display. *This is not a graphical display*. It will only display text characters.
   * Full color. All 256 of them. Only one color at a time.
 * Silicone membrane keyboard
-  * Custom-desinged keyboard
+  * Custom-desinged, it's like the keypad on a remote control
   * Other keyboard layouts supported; DVORAK, QWERTZ, and AZERTY are simply a matter of keyboard legends.
-* Battery power!
+* Battery power
   * Internal LiPo battery (> 2000 mAh) is charged from USB-C connector.
   * Provides > 12 hours of battery life.
 * Microcontroller
@@ -21,8 +22,10 @@ Features include:
 * Connectivity
   * DE-9 RS-232 serial connector, provided with MAX3232
   * USB over USB-C connector
-  * Internal UART connectors allow for internal connection to Raspberry Pi Zero (a la VT-180) or any other development board with a 40-pin 'raspi' header.
+  * Internal UART connectors allow for internal connection to $Single Board Computer$ (a la VT-180) or any other development board with a 'standard' 40-pin header.
   * Hardware handshaking in both DE-9 RS-232 port and internal header
-  * Supports _almost_ every terminal escape code recognized by the Linux console. 
+  * Supports _almost_ every terminal escape code recognized by the Linux console.
+* Documentation
+  * Many pages of documentation
   
 ![Side View Image](https://github.com/ViolenceWorks/VT-69/blob/main/Web-Assets/SideViewRender.png)
