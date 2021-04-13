@@ -14,7 +14,7 @@ The parser is effectively a state machine with six states:
 
 * Escape Intermediate
 
-	Escape Intermediate is the state entered when an intermediate character, '#' (0x23), '%' (0x25), '(' (0x28), ')' (0x29),or ']' (0x5D), arrives in an escape sequence; there are no paramaters, and the control function is determined by the intermediate and final characters
+	Escape Intermediate is the state entered when an intermediate character, '#' (0x23), '%' (0x25), '(' (0x28), ')' (0x29),or ']' (0x5D), arrives in an escape sequence; there are no paramaters, and the action taken is determined by the intermediate and final characters. These actions are listed in the chapter [Escape Codes](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/EscCodes.md).
 
 * CSI Entry
 
