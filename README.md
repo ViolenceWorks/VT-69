@@ -26,6 +26,6 @@ Features include:
   * Hardware handshaking in both DE-9 RS-232 port and internal header
   * Supports _almost_ every terminal escape code recognized by the Linux console.
 * Documentation
-  * Many pages of documentation
+  * [Many pages of documentation](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/README.md)
   
 ![Side View Image](https://github.com/ViolenceWorks/VT-69/blob/main/Web-Assets/SideViewRender.png)
