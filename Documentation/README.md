@@ -8,7 +8,7 @@
 * Thing 2
 * Thing 3
 
-## Terminal Parser
+## Terminal And Parser
 * [Archetecture of Parser](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ParserArchetecture.md)
 * [Escape codes](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/EscCodes.md)
-* Thing 3
+* [Fonts](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/Fonts.md)
