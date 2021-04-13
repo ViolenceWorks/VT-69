@@ -9,7 +9,7 @@ Features include:
 * Written in Rust 
 * 4" LCD with 800x480 resolution
   * Display allows for a full 80x24 character display. *This is not a graphical display*. It will only display text characters.
-  * Full color. All 256 of them. Only one color at a time.
+  * Full color. All eight of them. Only one color at a time.
 * Silicone membrane keyboard
   * Custom-desinged, it's like the keypad on a remote control
   * Other keyboard layouts supported; DVORAK, QWERTZ, and AZERTY are simply a matter of keyboard legends.
