@@ -63,8 +63,8 @@ The core of the parser is a state machine. Each incoming character is sent to a 
 				break;
 			
 			case stateCSIparam:
-			CSIparamState(character);
-			break;
+				CSIparamState(character);
+				break;
 			
 			case stateCSIignore:
 				CSIignoreState(character);
