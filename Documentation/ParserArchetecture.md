@@ -34,7 +34,9 @@ The parser is effectively a state machine with six states:
 
 	The CSI Ignore state serves to collect malformed Escape Codes.
 
+<p align="center">
 ![Image of parser state machine](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/StateMachine.png)
+</p>
 
 ## Implementation of the state machine
 
@@ -44,7 +46,9 @@ Blah blah blah
 
 Of note is the SGR function of the terminal parser. This function changes character attributes on the VT-69 display, allowing for bold characters, characters displayed in reverse video, and eight colors for foreground and background. Like the display caracter array, these attributes are bitpacked into a unit8_t array, where each character may be individually assigned a foreground color, background color, and two attribute bits for bold and reverse video:
 
+<p align="center">
 ![Image of SGR data structure](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/GraphicRenditiondatastructre.png)
+</p>
 
 A 1 in the bold or reverse video positions turns those attributes on, while a 0 turns those attributes off. Color is determined by the combination of bits in the foreground and background colors as such:
 
