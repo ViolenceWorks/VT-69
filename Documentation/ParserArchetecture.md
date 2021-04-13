@@ -9,12 +9,15 @@ The VT-69 parser is an ANSI-compliant parser that reads an incoming stream of by
 The parser is effectively a state machine with six states:
 
 * Ground
+
 	The 'default' state. If the parser is in the Ground state it will display nearly all incoming characters. There is one exception to this -- Escape. On reception of the Escape character, the parser will transition to the Escape State.
 
 * Escape Intermediate
+
 	Escape Intermediate is the state entered when an intermediate character, '#' (0x23), '%' (0x25), '(' (0x28), ')' (0x29),or ']' (0x5D), arrives in an escape sequence; there are no paramaters, and the control function is determined by the intermediate and final characters
 
 * CSI Entry
+
 	Upon reception of the '[' character (0x5B) while in the Escape State, the terminal will enter the CSI Entry state. This state will alternatively collect paramaters, supported escape codes, or characters that are not part of escape codes. 
 
 	Upon reception of a parameter (0x30-0x39, 0x3B), the parser will transition to the CSI Parameter state.
@@ -24,9 +27,11 @@ The parser is effectively a state machine with six states:
 	Upon reception of a character that is neither a parameter nor a supported escape code, the parser will transition to the CSI Ignore state.
 
 * CSI Parameter
+
 	Upon reception of a parameter (0x30-0x39, 0x3B) from the CSI Entry state, the parser will add parameters to a queue. Parameters are collected until a valid CSI Escape code is received, at which time the queue will be transformed into a queue of parameters for parsing inside the CSI Entry state.
 
 * CSI Ignore
+
 	The CSI Ignore state serves to collect malformed Escape Codes.
 
 ![Image of parser state machine](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/StateMachine.png)
