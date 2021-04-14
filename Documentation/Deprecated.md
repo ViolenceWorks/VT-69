@@ -8,6 +8,7 @@ Unfortunately, just because something is cool doesn't mean it's efficient. This 
 Additionally, this method is more extensible in that character colors may be preserved with an additional array indexing foreground and background colors. The current method is simply the better way to do it. But it's not the coolest.
 
 Example code is listed below:
+
 ```C
 /*The 'soft scroll' function moves all pixels on the display up
 20 pixels, or the height of one char. Algorithm is as follows:
@@ -33,7 +34,7 @@ NT35510 datasheet, page 40.
 window and output contents of 1D array. Repeat this
 460 times, for each line in the display.
 */
-/*
+
 uint8_t rowPixel[800];
 	
 			
