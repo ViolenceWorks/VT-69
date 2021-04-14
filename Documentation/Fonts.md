@@ -8,7 +8,7 @@ The font subsystem is capable of displaying monochrome bitmap fonts, with each c
 
 Each individual font is a uint8_t array with a size of 256 by 25. The individual characters are bitpacked into those 256 entries. Fonts are read from the top left to the bottom right, one row at a time; like reading English. An example of bitpacking for the letter 'a' is as follows:
 
-```
+```C
 //Character 0x61 =
 {
 	0x00, 0x00, 0x00, 0x00, 0x00,
@@ -20,7 +20,7 @@ Each individual font is a uint8_t array with a size of 256 by 25. The individual
 ```
 
 The code used to display the character is as follows:
-```
+```C
 for(uint16_t i=0; i <= 24; i++)
 {
 	for(int j=0;j<8;j++)
