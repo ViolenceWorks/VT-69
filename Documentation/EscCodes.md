@@ -17,6 +17,7 @@ like this:
 > Also manufacturers can make their own private escape codes.
 > We're calling this a 'Standard'.
 
+
 In developing this document, and writing the firmware for which this document
 documents, I believe the rise of GUI-based interfaces in the late 1970s and
 early 1980s was an attempt to dig us all out of the immense technological debt
