@@ -83,26 +83,12 @@ ASCII Code | Mnemonic | Function
 
 ### SGR - Select Graphic Rendition
 
-Of note is the SGR function of the terminal parser. This function changes character attributes on the VT-69 display, allowing for bold characters, characters displayed in reverse video, and eight colors for foreground and background. Like the display caracter array, these attributes are bitpacked into a unit8_t array, where each character may be individually assigned a foreground color, background color, and two attribute bits for bold and reverse video:
+Of note is the SGR function of the terminal parser. This function changes character attributes on the VT-69 display, allowing for bold characters, characters displayed in reverse video, and 24-bit color of the foreground and background colors. Like the display character array, these attributes are bitpacked into a unit64_t array, where each character may be individually assigned a foreground color, background color, and attributes for Bold, Half-Bright, Underscore, Blink, and Reverse Video.
 
 
 ![Image of SGR data structure](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/GraphicRenditiondatastructre.png)
 
-
-A 1 in the bold or reverse video positions turns those attributes on, while a 0 turns those attributes off. Color is determined by the combination of bits in the foreground and background colors as such:
-
-Color displayed | Red bit | Green bit | Blue bit
-----------------|---------|-----------|---------
-Black | 0 | 0 | 0
-Red  | 1 | 0 | 0
-Blue | 0 | 0 | 1
-Green | 0 | 1 | 0
-Yellow/Brown | 1 | 1 | 0
-Magenta | 1 | 0 | 1
-Cyan | 0 | 1 | 1
-White | 1 | 1 | 1
-
-While this imlementation is limited in that it does not offer complete compatability with Linux console escape codes, it is far more capable than a hardware VT-100. The 'blink' attribute is not implemented, because web browsers got rid of that tag and I'm still salty about it, and the marquee tag is too hard to build, or I don't care enough to do it.
+A 1 in the bold or reverse video positions turns those attributes on, while a 0 turns those attributes off.
 
 
 
