@@ -374,8 +374,14 @@ HPA | Horizontal Position Absolute | Esc [ Ps '
 
 	0 or none		All attributes off
 	1			Bold on
+	2			Set half-bright
+	4			Set underscore
+	5			Set blink
 	7			Reverse video on
+	21			Set underline
 	22			Bold off
+	24			Underline off
+	25			Blink off
 	27			Reverse video off
 	30			Set black foreground
 	31			Set red foreground
@@ -385,6 +391,7 @@ HPA | Horizontal Position Absolute | Esc [ Ps '
 	35			Set magenta foreground
 	36			Set cyan foreground
 	37			Set white foreground
+	38			256/24 bit foreground color (see below)
 	39			Set default foregrougn color (white)
 	40			Set black background
 	41			Set red background
@@ -394,9 +401,18 @@ HPA | Horizontal Position Absolute | Esc [ Ps '
 	45			Set magenta background
 	46			Set cyan background
 	47			Set white background
+	48			256/24 bit background color (see below)
 	49			Set default background color (black)
 				
 	Any other parameters are ignored.
+
+	Commands 38 and 48 require further arguments:
+
+	ESC [ 38 ; 5 ; x m: 256 color, where x values 0..15 are IBGR (black, red,
+	green, ... white), 16..231 a 6x6x6 color cube, 232..255 a grayscale ramp.
+
+	ESC [ 38 ; 2 ; r ; g ; b m: 24-bit color, r/g/b/ components are in the range
+	0..255.
 
 ## SM - Set Mode
 
