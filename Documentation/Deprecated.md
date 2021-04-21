@@ -103,3 +103,8 @@ for(uint16_t row = 0 ; row < 460 ; row++)
 //and fix the console text buffer
 fillRectBackColor(0, 460, 799, 480);
 ```
+While the GRAM read method will not be used in future code revisions, it is a technique that opens up many possibilities. For example, it is now possible to code Conway's Game of Life for this display. The naive implementation of GoL needs two framebuffers, or for this display 96kB -- one for the current display, and another to calculate the next generation. With this technique, I can code GoL in just a hundred or so bytes by [iterating over the display like a few demoscenes](http://www.sizecoding.org/wiki/Game_of_Life_32b#Original_version_:_65_bytes). This technique can also be applied to other cellular automata. 
+
+Alternatively the ability to read and write to a very large bit of RAM means the display + microcontroller combo can become a Turing machine, with all the inner machinations completely visible. I'm not saying I'm going to program a Turing machine in this display, I'm just saying it's possible.
+
+
