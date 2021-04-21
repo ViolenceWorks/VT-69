@@ -9,6 +9,8 @@ Additionally, this method is more extensible in that character colors may be pre
 
 Example code is listed below. [There is a video of this code working.](https://www.youtube.com/watch?v=RIFMr2cMZUs)
 
+[![Video of GRAM scroll](https://img.youtube.com/vi/RIFMr2cMZUs/0.jpg)](https://www.youtube.com/watch?v=RIFMr2cMZUs)
+
 ```C
 /*The 'soft scroll' function moves all pixels on the display up
 20 pixels, or the height of one char. Algorithm is as follows:
