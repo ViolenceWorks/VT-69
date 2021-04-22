@@ -83,7 +83,7 @@ ASCII Code | Mnemonic | Function
 
 ### SGR - Select Graphic Rendition
 
-Of note is the SGR function of the terminal parser. This function changes character attributes on the VT-69 display, allowing for bold characters, characters displayed in reverse video, and 24-bit color of the foreground and background colors. Like the display character array, these attributes are bitpacked into a unit64_t array, where each character may be individually assigned a foreground color, background color, and attributes for Bold, Half-Bright, Underscore, Blink, and Reverse Video.
+Of note is the SGR function of the terminal parser. This function changes character attributes on the VT-69 display, allowing for bold characters, characters displayed in reverse video, and the color of the foreground and background color. These attributes are saved in two arrays 80x24 in size. uint32_t consoleColors saves the foreground and background colors in 5/6/5 RGB format. The array uint8_t consoleSGR saves the Bold, Underscore, Blink, and Reverse Video attributes of each character.
 
 
 ![Image of SGR data structure](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/GraphicRenditiondatastructre.png)
