@@ -9,7 +9,7 @@ Features include:
 * Written in Rust 
 * 4" LCD with 800x480 resolution
   * Display allows for a full 80x24 character display. *This is not a graphical display*. It will only display text characters.
-  * Full 24-bit color.
+  * 65536 colors, all of them.
 * Silicone membrane keyboard
   * 69 keys. That's why it's the VT-69.
   * Custom-desinged, it's like the keypad on a remote control
