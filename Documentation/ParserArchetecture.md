@@ -81,7 +81,7 @@ ASCII Code | Mnemonic | Function
 0x1B | ESC | Transition to Escape state
 0x7F | DEL | Ignored by terminal
 
-### SGR - Select Graphic Rendition
+## SGR - Select Graphic Rendition
 
 Of note is the SGR function of the terminal parser. This function changes character attributes on the VT-69 display, allowing for bold characters, characters displayed in reverse video, and the color of the foreground and background color. These attributes are saved in two arrays 80x24 in size. uint32_t consoleColors saves the foreground and background colors in 5/6/5 RGB format. The array uint8_t consoleSGR saves the Bold, Underscore, Blink, and Reverse Video attributes of each character.
 
