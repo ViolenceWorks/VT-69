@@ -450,7 +450,7 @@ uint16_t eightBitColor[256] =
 	by the following algorithm:
 	
 ```C
-Something goes here.
+result = ((r & 0xf8) << 8) | ((g & 0xfc) << 3) | (b >> 3);
 ```
 
 	
