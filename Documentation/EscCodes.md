@@ -446,7 +446,12 @@ uint16_t eightBitColor[256] =
 ```
 
 	ESC [ 38 ; 2 ; r ; g ; b m: 24-bit color, r/g/b/ components are in the range
-	0..255.
+	0..255. These 24-bit values are compressed into 16-bit colors (5-6-5 r/g/b)
+	by the following algorithm:
+	
+```C
+Something goes here.
+```
 
 	
 
