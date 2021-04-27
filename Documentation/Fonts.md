@@ -6,6 +6,8 @@ The font subsystem is capable of displaying monochrome bitmap fonts, with each c
 
 ## Structure of font data
 
+![Font Data Structure](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/FontDiagram.png)
+
 Each individual font is a uint8_t array with a size of 256 by 25. The individual characters are bitpacked into those 256 entries. Fonts are read from the top left to the bottom right, one row at a time. An example of bitpacking for the letter 'a' is as follows:
 
 ```C
