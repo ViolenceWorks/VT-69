@@ -29,11 +29,11 @@ for(uint16_t i=0; i <= 24; i++)
 	{
 		if((fontArray[character][i]&(1<<(7-j)))!=0)
 		{
-			setPixel((fore_Color_High<<8)|fore_Color_Low);	
+			setPixel(Foreground);	
 		}
 		else
 		{
-			setPixel((back_Color_High<<8)|back_Color_Low);
+			setPixel(Background);
 		}
 	}
 }
