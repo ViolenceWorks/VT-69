@@ -29,6 +29,12 @@ for(uint16_t i=0; i <= 24; i++)
 ```
 Generating these bitmap arrays is done with a script, image_to_c_buff.py, found in the folder Scripts.
 
+## Font Rendition Data Structure
+
+Font data, or the options for bold, underscore, reverse video, blink, as well as foreground and background color, are stored as arrays:
+
+![Font Rendition Data Structure](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/GraphicRenditiondatastructre.png)
+
 ## Code Page 437
 
 Code page 437 is the default font of the IBM PC and the core of EGA and VGA graphics cards. Also known as 'High ASCII' and 'Extended ASCII', characters 0x80-0xFF in Code page 437 (especially 0xC0-0xDF, 'box characters') are commonly used in Text-based pseudo-GUIs.
