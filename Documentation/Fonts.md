@@ -6,18 +6,9 @@ The font subsystem is capable of displaying monochrome bitmap fonts, with each c
 
 ## Structure of font data
 
-Each individual font is a uint8_t array with a size of 256 by 25. The individual characters are bitpacked into those 256 entries. Fonts are read from the top left to the bottom right, one row at a time. An example of bitpacking for the letter 'a' is as follows:
+![Font Data Structure](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/FontDiagram.png)
 
-```C
-//Character 0x61 =
-{
-	0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x03, 0xf0, 0xfc,
-	0x01, 0x80, 0x63, 0xf8, 0xfe,
-	0xc0, 0xb0, 0x23, 0xf8, 0xfe,
-	0x00, 0x00, 0x00, 0x00, 0x00
-},
-```
+Each individual font is a uint8_t array with a size of 256 by 25. The individual characters are bitpacked into those 256 entries. Fonts are read from the top left to the bottom right, one row at a time.
 
 The code used to display the character is as follows:
 ```C
@@ -25,18 +16,24 @@ for(uint16_t i=0; i <= 24; i++)
 {
 	for(int j=0;j<8;j++)
 	{
-		if((fontArray[character][i]&(1<<(7-j)))!=0)
+		if((font[character][i]&(1<<(7-j)))!=0)
 		{
-			setPixel((fore_Color_High<<8)|fore_Color_Low);	
+			setPixel(Foreground);	
 		}
 		else
 		{
-			setPixel((back_Color_High<<8)|back_Color_Low);
+			setPixel(Background);
 		}
 	}
 }
 ```
 Generating these bitmap arrays is done with a script, image_to_c_buff.py, found in the folder Scripts.
+
+## Font Rendition Data Structure
+
+Font data, or the options for bold, underscore, reverse video, blink, as well as foreground and background color, are stored as arrays:
+
+![Font Rendition Data Structure](https://github.com/ViolenceWorks/VT-69/blob/main/Documentation/ArtAssets/GraphicRenditiondatastructre.png)
 
 ## Code Page 437
 
