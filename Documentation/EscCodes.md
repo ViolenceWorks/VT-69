@@ -525,5 +525,8 @@ result = ((r & 0xf8) << 8) | ((g & 0xfc) << 3) | (b >> 3);
 
 6. ANSI Code Extension ANSI Standard X3.64-1974, X3.64-1979 
 	(ISO 2022 and 6429)
+	
+7. DEC STD 070 Video Systems Reference Manual (A-MN-ELSM070-00-0000
+	Rev H, 03-Dec-1991), Digital Equipment Corporation
 
 EOF
