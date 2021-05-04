@@ -268,7 +268,7 @@ HPA | Horizontal Position Absolute | Esc [ Ps '
 	of the bottom margin. Default values if either or both parameters are
 	omitted are 1 for the top margin and 24 for the bottom margin.
 	
-	### Format:
+	Format:
 	Esc [ Pt ; Pb r
 	defualt Pt: 1
 	default Pb: last line (24)
