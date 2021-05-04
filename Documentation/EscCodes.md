@@ -262,7 +262,30 @@ HPA | Horizontal Position Absolute | Esc [ Ps '
 	setting of the Editing Extent Mode (see SEM).
 
 ## DECSTBM - Set Scrolling Region
-	Defines the scrolling region of the display. Default parameters are 0, 24.
+	This control sets the values of the top and bottom margins of the scrolling
+	region. The new settings are determined by the parameter values; first
+	parameter sets the value of the top margin, second parameter sets the value
+	of the bottom margin. Default values if either or both parameters are
+	omitted are 1 for the top margin and 24 for the bottom margin.
+	
+	### Format:
+	Esc [ Pt ; Pb r
+	defualt Pt: 1
+	default Pb: last line (24)
+	
+	Notes:
+	Execution of this contro causes the active position to be set to the page
+	origin obeying the Origin Mode (DECOM) : First column of the first line if
+	Origin Mode is in the reset (Absolute) state; Top and Lef margins if the 
+	Origin Mode is in the set (Displaced) state.
+	
+	If the value specified for the Top Margin is equal to or greater than the 
+	value specified for the Bottom Margin, this control will be ignored and 
+	not executed.
+	
+	If the value specified for the Bottom Margin is greater than the number 
+	of lines in the Logical Display Page, this control will be ignored and '
+	not executed.
 
 ## DL - Delete Lines
 	Deletes the indicated number of lines, inclusive of current line. Default
