@@ -360,7 +360,10 @@ HPA | Horizontal Position Absolute | Esc [ Ps '
 	All parameters are ignored.
 
 ## RI - Reverse Index
-	Moves the cursor to the same horizontal position on the preceding line.
+	Moves the active position upward in the display by one line. If the active
+	position is already at the top margin the display will scroll downward by
+	one line. If the display scrolls, a blank line with all attributes off will
+	appear at the top margin.
 
 ## RIS - Reset to Initial State
 	Resets a device to its initial state, that is, the state it has after it is
