@@ -22,6 +22,8 @@ This guide assumes the SBC is running at least Debian 'Jessie', kernel version 4
 
 2. Edit the serial-getty service
 
+	`sudo nano /lib/systemd/system/serial-getty@.service`
+
 	change the line `ExecStart=-/sbin/agetty -o '-p -- \\u' --keep-baud 115200,38400,9600 %I $TERM` to the following: `ExecStart=-/sbin/agetty 9600 %I vt100`.
 
 3. Restart systemctl
